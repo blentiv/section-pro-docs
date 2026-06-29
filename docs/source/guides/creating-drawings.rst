@@ -67,6 +67,10 @@ When projection is enabled:
      - Only include geometry within a maximum distance from the section plane.
    * - **Distance**
      - The maximum distance in scene units (only active when Limit is on).
+   * - **Merge**
+     - Merge nearby projection vertices before BVH construction. Reduces geometry complexity and can improve hidden edge detection quality.
+   * - **Dissolve**
+     - Dissolve near-collinear projection edges before BVH construction. Reduces silhouette edge count on smooth or subdivided geometry.
    * - **Hidden Edge Detection**
      - Detect and store edges that are hidden behind other geometry. Stored in a separate edge layer.
    * - **Quality**

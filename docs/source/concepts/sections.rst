@@ -31,7 +31,7 @@ Section Methods
 The way the section cut is rendered depends on the **section method** configured on the active :doc:`View <views>`. There are two methods:
 
 **Boolean**
-    A cutter object (a box aligned to the section plane) is applied to each target object as a Geometry Nodes modifier with a boolean operation. This produces a true mesh cut that is compatible with all render engines and solid shading modes. Moving the section object updates the cutter when *Lazy Load* is disabled, or only when you explicitly update it otherwise.
+    A cutter object (a box aligned to the section plane) is applied to each target object as a Geometry Nodes modifier with a boolean operation. This produces a true mesh cut that is compatible with all render engines and solid shading modes. After transforming the section the cut has to be updated manually.
 
 **Shader**
     The section cut is implemented by modifying the material shaders of the target objects. A Section Pro shader node group is injected into each material to discard geometry below the cut plane. This method is faster to set up and does not alter the mesh, but requires the Eevee or Cycles render engine to display correctly.
@@ -42,7 +42,6 @@ Section Display
 
 In the *Display Settings* sub-panel you can control the visual appearance of the section:
 
-- **Lazy Load** – When enabled, the boolean cutter is *not* updated automatically when you move the section object. Use the *Update Cutter* operator to apply the new transform manually. Disabling Lazy Load causes the cutter to update live as you transform the section.
 - **Show Plane** – Toggles the visibility of the section plane gizmo overlay in the viewport.
 - **Plane Color** – The color used to draw the section plane gizmo.
 

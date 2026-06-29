@@ -194,7 +194,7 @@ Update Cutter
 
 ``section_pro.update_cutter``
 
-Manually updates the cutter object's transform to match the current position and rotation of the active section object. Required when *Lazy Load* is enabled and you have moved the section object.
+Manually updates the cutter object's transform to match the current position and rotation of the active section object.
 
 
 
